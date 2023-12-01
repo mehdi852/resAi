@@ -1,0 +1,152 @@
+.dashboard-search {
+    background-color: white;
+    padding: 10px 5%;
+    // implement light shadow lightgrey with
+    border: 1px solid rgba(176, 176, 176, 0.393);
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+    
+    box-sizing: border-box;
+    .dashboard-search-group {
+        display: flex;
+        align-items: center;
+        .dashboard-search-loading{
+            /// make sure this icon always spin
+            animation: spin 1s linear infinite;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+
+        }
+        .dashboard-search-input {
+            margin: 0px;
+            padding: 0px;
+            height: 40px;
+            outline: none;
+            border: 0px;
+            font-size: 1.2em;
+            background-color: white;
+        
+
+            
+            
+        }
+        // style the placeholder of the input
+        .dashboard-search-input::placeholder {
+            color: #bbbaba;
+            font-weight: 300 !important;
+        }
+
+        .dashboard-search-button {
+            padding: 0;
+        }
+        .dashboard-search-icon {
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+            fill: #bbbaba;
+        }
+        .dashboard-search-filter{
+            background-color: #426ae0;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            // give the button a small shadow
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                background-color: #2c4db0 !important;
+            }
+
+            .dashboard-search-filter-icon{
+                fill: white;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+
+            }
+            
+            
+            
+        }
+        .dashboard-search-filter-dropdown { 
+            
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 20px;
+            left: -30px;
+            .dashboard-search-filter-dropdown-item {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                transition: 0.1s all ease-in;
+                label{
+                    margin-left: 10px;
+                    font-size: 0.9em;
+                }
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+          
+        }
+        // give this filter ellement a small hover effect 
+        .dashboard-search-filter:hover{
+            background-color: #2e4eb5;
+        }
+
+        // check if visited and keep same color
+        .dashboard-search-filter:visited {
+            background-color: #426ae0;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+.dashboard-search-filter-items{
+    display: flex;
+   
+    margin: 0px 10px;
+    margin-top: 15px;
+
+    .dashboard-search-filter-item{
+        background-color: #EFEFEF;
+        color: #3A3A3A;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: 0.1s all ease-in;
+        // give the item a small hover effect
+        &:hover{
+            background-color: #D8D8D8;
+        }
+    }
+    .dashboard-search-filter-clearAll{
+        // a link to clear all filters
+        text-decoration: none;
+        color: #476AE0;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: 0.1s all ease-in;
+   
+
+    }
+}

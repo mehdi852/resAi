@@ -1,0 +1,36 @@
+.select_resumes{
+    background-color: rgb(182, 184, 192) !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid rgb(172, 169, 169) !important;
+    border-radius: 20px;
+   
+    overflow-y: scroll;
+ 
+    // remove scrollbar
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .select_resume_item{
+        overflow: hidden; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 10px;
+        width: 40%;
+     
+
+        
+        img{
+            width: 95%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+ 
+        }     
+    }
+}

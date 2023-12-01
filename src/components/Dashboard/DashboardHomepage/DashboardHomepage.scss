@@ -1,0 +1,132 @@
+.dashboard-homepage {
+    // handling the grid
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 150;
+    .dashboardGrid {
+        display: flex;
+        width: 80%;          
+          height: 1100px;
+
+        
+        
+        .dashboardGridLeft {
+            width: 25%;
+        }
+        .dashboardGridCenter {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+
+            .dashboar-loading{
+                width:100%;
+                height:100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .noDocuments{
+                background-color: #ffff;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                border-radius: 10px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                 height: 50%;
+                .icon{
+                    width: 300px;
+                }
+                align-items: center;
+                h2{
+                    padding: 0;
+                    margin: 0;
+                }
+
+            }
+        }
+        .dashboardGridRight {
+            width: 25%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+    }
+
+    ///
+    .dashboardContent {
+        margin-top: 50px;
+        width: 40%;
+        //height: 100% !important;
+
+        hr {
+            border: 0px;
+            height: 1px;
+            background-color: #cfcfcf;
+        }
+        .head {
+            .headContent {
+                display: flex;
+                justify-content: space-between;
+                a {
+                    align-self: center;
+                }
+            }
+        }
+        .resumesList {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .noResumesImage {
+                margin: 30px;
+                width: 400px;
+            }
+            ul {
+                padding: 0;
+                list-style-type: none;
+                width: 95%;
+                .resumeItem {
+                    width: 95%;
+                    padding: 20px;
+                    background-color: white;
+                    border-radius: 15px;
+                    display: flex;
+                    margin-top: 20px;
+                    .resumeItemStatus {
+                        width: 7px;
+                        height: 50px;
+                        border-radius: 30px;
+                    }
+                    .resumeItemContent {
+                        display: flex;
+                        margin-left: 20px;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                        .btn-removeResume {
+                            background-color: rgb(231, 76, 60);
+                            margin-left: 10px;
+                        }
+                        .resumeItemContentWrapper {
+                            display: flex;
+                            flex-direction: column;
+                            .name {
+                                font-weight: 600;
+                            }
+                            .occupation {
+                                font-size: 14px;
+                                color: #a7a9aa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

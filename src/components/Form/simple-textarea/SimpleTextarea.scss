@@ -1,0 +1,324 @@
+@import '../../variables.scss';
+
+.simpleTextArea {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    .inputTitle {
+        margin: 5px 0px;
+        color: #98a1b3;
+        font-size: 15px;
+    }
+
+   
+    .simpleTextArea-inputWrapper {
+        position: relative;
+        textarea {
+            background-color: rgba(241, 240, 243, 0.7764705882);
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: 10px 10px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 100;
+            min-height: 100px;
+            width: 100%;
+            // style the textarea a minimal scrollbar
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: rgb(175, 175, 175);
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
+    
+
+        .simpleTextArea-loading{
+            overflow: hidden;
+            position: absolute;
+            background-color: rgba(10, 10, 10, 0.793);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            border-radius: 5px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .simpleTextArea-loading-center{
+                background-color: white;
+                width: 70px;
+                height: 70px;
+                border-radius: 5px;
+            }
+
+        }
+
+    }
+        
+
+    textarea:focus {
+        outline-width: 0;
+        border: 1px solid $btn-default;
+    }
+
+    textarea:focus ~ .border {
+        width: 100% !important;
+        display: initial;
+        opacity: 1;
+        height: 0px;
+    }
+
+    // .border {
+    //     width: 0px;
+    //     opacity: 0;
+    //     width: 0%;
+
+    //     border: 1px solid transparent;
+    //     background-color: $btn-default;
+    //     transition: all 0.3s ease-in-out;
+    //     border-bottom-left-radius: 5px;
+    //     border-bottom-right-radius: 5px;
+    // }
+}
+
+.simpleTextArea-wrapper {
+    .simpleTextArea-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .toggle-text {
+            color: rgb(130, 139, 162);
+            font-size: 0.9em;
+            cursor: pointer;
+            &:hover {
+                color: rgb(30, 37, 50);
+            }
+        }
+
+        .toggle-button-ai{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:5px;
+            font-weight: 500;
+            margin: 10px 0px;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            position: relative;
+            border-radius: 5px;
+            z-index: 2000;
+            img{
+                width: 25px;height: 25px;
+            }
+
+        }
+        
+          .toggle-button-ai:hover { 
+         background-color: rgb(243, 239, 239);
+
+         .toggle-popup{
+            opacity: 1;
+         }
+
+         transition: all 0.2s ease-in-out;
+
+        }
+        .toggle-popup{
+            border-radius: 10px;
+            font-size: 0.6rem;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            top: -120px;
+            right: -50px;
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+            color: white;
+        }
+
+       
+    }
+
+    .simpleTextArea-suggestion {
+        position: absolute;
+        overflow: hidden;
+        z-index: 1000;
+        left: 250px;
+        top: 50%;
+        width: 700px;
+        margin-left: 16px;
+        border-radius: 3px;
+        background: rgb(255, 255, 255);
+        box-shadow: rgb(23 68 130 / 20%) 0px 0px 1px, rgb(23 68 130 / 15%) 0px 2px 14px;
+        transform: translateX(40px) translateY(50px);
+
+        .simpleTextArea-suggestion-head {
+            display: flex;
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid rgb(231, 234, 244);
+            justify-content: space-between;
+            align-items: center;
+
+            .simpleTextArea-suggestion-head-icon {
+                width: 20px;
+                height: 20px;
+                margin: 15px 15px 15px 15px;
+            }
+            .simpleTextArea-categories {
+                width: 90%;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                // hide scroll bar
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .simpleTextArea-categories-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 15px 15px 15px 15px;
+                    padding: 8px 15px;
+                    border-radius: 25px;
+                    font-size: 0.9em;
+                    cursor: pointer;
+                    width: fit-content;
+                    background-color: rgb(231, 234, 244);
+                    transition: all 0.1s ease-in-out;
+
+                    &:hover {
+                        background-color: #694aff;
+                        color: white;
+                    }
+                    // active
+                    &.active {
+                        background-color: #694aff;
+                        color: white;
+                    }
+                }
+            }
+            input {
+                width: 90%;
+                display: block;
+                background: none;
+                padding: 13px 15px 11px;
+                margin: 0px;
+                border: none;
+                color: rgb(30, 37, 50);
+                outline: none;
+
+                // change text of placeholder
+                &::placeholder {
+                    color: rgb(130, 139, 162);
+                    font-weight: 500;
+                    font-size: 1.2em;
+                }
+            }
+
+            .simpleTextArea-suggestion-head-search-icon {
+                width: 25px;
+                height: 25px;
+                margin-left: 15px;
+            }
+            .simpleTextArea-suggestion-head-icon {
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+                // on hover show a a rectangle like the one in twitch
+                &:hover {
+                    background-color: rgb(231, 234, 244);
+                    border-radius: 3px;
+                }
+            }
+        }
+        .simpleTextArea-suggestion-body {
+            height: 250px;
+            overflow-y: scroll;
+            // give it a scrollbare like the one used in resume.io suggestions scrollbar
+            &::-webkit-scrollbar {
+                width: 5px;
+                // rounded
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: rgb(158, 169, 197);
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            .simpleTextArea-suggestion-body-head {
+                .simpleTextArea-suggestion-body-head-most-popular {
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    color: rgb(236, 147, 12);
+                    .simpleTextArea-suggestion-body-head-most-popular-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin: 15px 15px 15px 15px;
+                        fill: rgb(236, 147, 12);
+                    }
+                }
+            }
+
+            .simpleTextArea-suggestion-body-items {
+                .simpleTextArea-suggestion-body-items-item {
+                    display: flex;
+                    height: fit-content;
+                    .simpleTextArea-suggestion-body-items-item-left {
+                        .icon {
+                            // give it a rectangle background like the one used in twitch hover
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 3px;
+                            margin: 15px 15px 15px 15px;
+                            padding: 4px;
+                            background-color: rgb(231, 234, 244);
+                            color: rgb(130, 139, 162);
+                            cursor: pointer;
+
+                            transform: rotate(90deg);
+                            // give the background collore a hover effect
+                            &:hover {
+                                background-color: rgb(235, 234, 234);
+                            }
+                        }
+                    }
+                    .simpleTextArea-suggestion-body-items-item-right {
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.suggestionParagraph {
+    cursor: pointer;
+    // set active
+    &.active {
+        background-color: rgb(225, 234, 242);
+        color: rgb(26, 145, 240);
+        .icon {
+            fill: rgb(255, 255, 255);
+        }
+    }
+}

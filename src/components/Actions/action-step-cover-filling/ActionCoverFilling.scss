@@ -1,0 +1,250 @@
+@import '../../variables.scss';
+.addFields-wrapper {
+   display: flex;
+   flex-direction: column;
+
+   a {
+      justify-self: center;
+      align-self: center;
+   }
+}
+
+
+/// hide the scrollbar of the div with class action-introWrapper
+/// Language: scss
+
+
+// Path: src\components\Actions\action-intro-wrapper\ActionIntroWrapper.scss
+
+
+.cover-components{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0;
+    .cover-components-image{
+      width: 100px;
+      height: 100px;
+      fill:#694AFF
+    }
+}
+
+
+.action-introWrapper{
+
+   overflow-y: scroll;
+   overflow-x: hidden;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+}
+
+.addFields {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin-top: 2%;
+   margin-bottom: 5%;
+   position: relative;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 60px;
+
+
+   .addFieldsDrop {
+      position: absolute;
+      z-index:1000;
+      background-color: white;
+      top: -200px;
+      width: 280px;
+      height: fit-content;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid rgb(234, 234, 234);
+      margin-bottom: 30px;
+      // small shadow light grey
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      .addFieldsDrop-head {
+         padding: 15px;
+         font-size: 0.9em;
+         font-weight: bold;
+         border-bottom: 1px solid rgb(234, 234, 234);
+      }
+
+      .addFieldsDrop-items {
+         ul {
+            padding: 0;
+            li:hover {
+               background-color: rgba(247, 247, 247, 0.605);
+
+               .addFieldsDrop-icon {
+                  fill: rgb(62, 62, 62);
+               }
+            }
+            li {
+               cursor: pointer;
+               display: flex;
+               padding: 8px 10px;
+               align-items: center;
+               justify-content: space-between;
+               .item-left{
+                  display:flex;
+                  flex-direction: row;
+                  .addFieldsDrop-icon {
+                     width: 25px;
+                     height: 25px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     margin-right: 10px;
+                     fill: rgb(176, 176, 176);
+                  }
+                  a {
+                     text-decoration: none;
+                     color: black;
+                     font-size: 0.8rem;
+                  }
+   
+                  a:visited {
+                     color: black;
+                  }
+               }
+               .item-right{
+                  
+                  .item-membership-basic{
+                     background-color: rgb(163, 163, 163);
+                     color: white;
+                     padding: 5px 10px;
+                     font-size: 0.8rem;
+                     border-radius: 8px;
+
+                     width: 100px;
+                  }
+                  .item-membership-pro{
+                  
+                     background-color: #694AFF;
+                     color: white;
+                     padding: 5px 10px;
+                     font-size: 0.8rem;
+                     border-radius: 8px;
+                     
+                  }
+               }
+               
+            }
+         }
+      }
+   }
+}
+
+.outline-primary {
+   border: 1px solid #694aff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   transition: all 0.2s ease-in-out;
+   text-decoration: none;
+   color: #694aff;
+   display: inline;
+   cursor: pointer;
+}
+
+.outline-primary:hover {
+   background-color: #694aff;
+   color: #fff;
+}
+
+.custom-list-item {
+   display: flex;
+   padding: 20px;
+   flex-direction: column;
+
+   .custom-list-item-number{
+      width: 100px;
+      display: flex;
+      align-items: center;
+   }
+   .custom-list-item-input {
+      width: 95%;
+      input {
+         font-family: 'Poppins';
+         background-color: #f8fafe;
+         // transparent border
+         border: 1px solid rgba(0, 0, 0, 0);
+
+
+         border-radius: 3px;
+         padding: 10px 10px;
+         height: 30px;
+         font-size: 15px;
+         outline: none;
+         width: 100%;
+         transition: all 0.2s ease-in-out;
+      }
+      // input focus
+      input:focus {
+         border: 1px solid #694aff;
+      }
+      input:not(:focus)  {
+         background-color: #f1f0f3c6;
+      }
+
+   }
+}
+
+.custom-list-item .custom-list-item-input input:focus ~ .border-list {
+   width: 100%;
+   opacity: 1;
+}
+
+
+.cover-separator{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   .cover-separator-line{
+      width: 50%;
+      height: 1px;
+      background-color: rgb(238, 238, 238);
+   }
+}
+
+.add-item{
+   text-align: center;
+            border:1px solid rgb(197, 197, 197);
+            display: flex;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            .toggle-icon{
+                margin-right: 5px;
+            }
+
+
+            // hover
+            &:hover {
+                border: 1px solid $btn-default;
+            }
+           
+            span {
+                color: black;
+                vertical-align: middle;
+                font-size: 0.8em;
+            }
+
+}
+
+#add-List{
+   border: 2px solid #F8FAFE;
+      padding: 20px;
+   border-radius: 10px;
+}

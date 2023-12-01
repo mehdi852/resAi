@@ -1,0 +1,218 @@
+.dashboard-resume-card {
+    // a card styling with shadow etc
+    // implement light shadow lightgrey with
+    border: 1px solid rgba(219, 219, 219, 0.393);
+    border-radius: 15px;
+    margin: 20px 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 0px 15px;
+
+    .dashboard-resume-card-head {
+        display: flex;
+        justify-content: space-between;
+        .dashboard-resume-card-head-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .dashboard-resume-card-head-left-avatar {
+                // a circle avatar with prototype color
+                background-color: #426ae0;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                overflow: hidden;
+                .dashboard-resume-card-head-left-avatar-icon {
+                    transform: translateY(10px);
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .dashboard-resume-card-head-center {
+            display: flex;
+            align-items: flex-start;
+            width: 80%;
+            flex-direction: column;
+            padding: 10px 0px;
+            .dashboard-resume-card-head-center-title {
+                font-size: 1.2em;
+                font-weight: 500;
+                margin-bottom: 5px;
+                padding: 10px 0px;
+            }
+
+            .dashboard-resume-card-head-center-skills {
+                display: flex;
+                flex-wrap: wrap;
+
+                .dashboard-resume-card-head-center-skills-item {
+                    // list of skills like the ones we did before in the dashboard
+                    background-color: #e6ebfb;
+                    color: #426ae0;
+                    text-decoration: none;
+                    padding: 5px 20px;
+                    border-radius: 25px;
+                    // give the button a small shadow
+                    margin-right: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.1s all ease-in;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .dashboard-resume-card-head-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 30px;
+
+            .dashboard-resume-card-head-right-bookmark {
+                background-color: #f7f7f7;
+                padding: 8px;
+                border-radius: 10px;
+                // small hover effect for this element
+                transition: 0.1s all ease-in;
+                cursor: pointer;
+                margin-left: 10px;
+                position: relative;
+
+                
+                &:hover {
+                    background-color: #edebeb;
+                    
+                }
+
+               
+
+                div.dashboard-share-modal {
+                    background-color: #fff;
+                    position: absolute;
+                    width: 400px;
+                    border-radius: 9px;
+                    border: 1px solid rgba(237, 235, 235, 0.416);
+                    padding: 20px;
+                    z-index: 10000;
+                    div.dashboard-share-modal-head {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        div.dashboard-share-modal-head-title {
+                            font-weight: 600;
+                            font-size: 0.9em;
+                        }
+
+                        div.dashboard-share-modal-head-close {
+                            .dashboard-share-modal-head-close-icon {
+                                padding: 3px;
+                                width: 20px;
+                                height: 20px;
+                                cursor: pointer;
+                                border-radius: 50%;
+                                transition: 0.1s all ease-in;
+                                &:hover {
+                                    background-color: #e8e8e9;
+                                }
+                            }
+                        }
+                    }
+
+                    div.dashboard-share-tabs {
+                        border-bottom: 1px solid rgba(219, 219, 219, 0.393);
+                        div.dashboard-share-tabs-item.active {
+                            border-bottom: 3px solid black;
+                            // radius to border
+
+                            font-weight: 500;
+                            display: inline-flex;
+                            height: 40px;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    div.dashboard-share-body {
+                        div.dashboard-share-body-title {
+                            font-weight: 400;
+                            font-size: 0.8rem;
+                            margin: 10px 0px;
+                        }
+
+                        div.dashboard-share-body-input {
+                            display: flex;
+                            align-items: center;
+
+                            height: 40px;
+                            input {
+                                width: 100%;
+                                border: 1px solid rgba(204, 204, 204, 0.393);
+                                border-radius: 5px;
+                                height: 100%;
+                                font-size: 0.8rem;
+                                outline: none;
+                                color:  grey;
+                                font-weight: 600;
+                                padding: 0px 10px;
+                                box-sizing: border-box;
+                            }
+
+                            .dashboard-share-copy {
+                                background-color: black;
+                                color: #fff;
+                                height: 100%;
+                                width: 100px;
+                                border-radius: 5px;
+                                margin-left: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: small;
+                            }
+                        }
+                    }
+                }
+                .dashboard-resume-card-head-right-bookmark-icon {
+                    width: 20px;
+                    height: 20px;
+                    fill: #818181;
+                }
+                &.active {
+                    background-color: #f7c04c;
+                    .dashboard-resume-card-head-right-bookmark-icon {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .dashboard-resume-card-body {
+        .dashboard-resume-card-body-description {
+            padding: 10px;
+            font-size: 0.8em;
+            color: #818181;
+        }
+    }
+
+    .dashboard-resume-card-footer {
+        display: flex;
+        // reverse items
+        flex-direction: row-reverse;
+        .dashboard-resume-card-footer-date {
+            padding: 10px;
+            font-size: 0.75em;
+            color: #818181;
+        }
+    }
+}

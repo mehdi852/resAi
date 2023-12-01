@@ -1,0 +1,288 @@
+.profile-display {
+    width: 90%;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 24px 20px;
+    // implement light shadow lightgrey with
+    border: 1px solid rgba(219, 219, 219, 0.393);
+    box-sizing: border-box;
+
+    .profile-picture {
+        display: flex;
+        .profile-picture-holder {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f2f2f2;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            // center the image
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+    .profile-name {
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin: 10px 0px;
+    }
+    .profile-job {
+        width: 100%;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1em;
+        margin: 0px 0px 0px 0px;
+        color: rgb(135, 135, 135);
+    }
+    .profile-status {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px;
+        .profile-status-online {
+            background-color: #e9f4ef;
+            padding: 7px 20px;
+            border-radius: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .profile-circle {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #2ecc71;
+                margin-right: 10px;
+            }
+            span {
+                color: #2ecc71;
+                font-weight: 500;
+                font-size: 1em;
+            }
+        }
+    }
+    .profile-details {
+        padding: 0px 5%;
+        .add-skill {
+            position: relative;
+            .add-skill-plus {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #426ae0;
+                }
+            }
+        }
+        .profile-details-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+            position: relative;
+            z-index: 100;
+            li {
+                width: 100%;
+                display: flex;
+                justify-self: space-between;
+               
+                margin: 10px 0px;
+                // make sure text  go back to line
+
+                .profile-details-list-label {
+                    font-weight: 400;
+                    font-size: 1em;
+                    color: rgb(135, 135, 135);
+                    flex: 1;
+                }
+                cursor: pointer;
+                position: relative;
+                z-index: 100;
+
+                .profile-details-list-value-add {
+                    position: absolute;
+                    box-sizing: border-box;
+                    top: -20px;
+                    right: -370px;
+                    border-radius: 5px;
+                    background-color: #ffff;
+                    border-radius: 8px;
+                    padding: 10px 20px;
+                    z-index: 2000;
+                    .prodile-modal-head {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        .profile-modal-name {
+                        }
+                        .profile-modal-close {
+                            padding: 8px 8px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            font-size: 20px;
+                        }
+                    }
+
+                    input {
+                        border: 2px solid rgb(223, 223, 223);
+                        outline: none;
+                        padding: 10px 10px;
+                        border-radius: 8px;
+                    }
+                    a {
+                        border: 2px solid rgb(223, 223, 223);
+                        color: #426ae0;
+                        font-weight: 600;
+                        padding: 7px 10px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        margin-left: 5px;
+                    }
+                }
+                .profile-details-list-value {
+                    font-weight: 500;
+                    font-size: 0.8em;
+                    padding-left: 20px;
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    z-index: 100;
+                    // make sure text  go back to line
+                    word-break: break-all;
+
+                    .profile-details-list-value-add-wrapper {
+                        
+                     
+
+                        .profile-details-list-value-add-link {
+                            cursor: pointer;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+
+                .profile-details-head-left {
+                    font-weight: 500;
+                    font-size: 1em;
+                    color: rgb(135, 135, 135);
+                }
+                .profile-details-head-right {
+                    font-weight: 500;
+                    font-size: 1em;
+                    color: rgb(135, 135, 135);
+                }
+            }
+        }
+    }
+
+    .skills-holder {
+        .profile-skill-holder {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            list-style-type: none;
+            .profile-skill {
+                background-color: #e6ebfb;
+                color: #426ae0;
+                padding: 5px 20px;
+                border-radius: 100px;
+                cursor: pointer;
+                transition: 0.2 s all ease-in-out;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .profile-skill-name {
+                    transition: 0.2s all ease-in-out;
+                    font-size: 0.9em;
+                }
+                .profile-skill-delete {
+                    position: absolute;
+                    top: 10px;
+                    opacity: 0;
+                    transition: 0.2s all ease-in-out;
+                    transform: translateX(-40px);
+
+
+                }
+                &:hover {
+                    .profile-skill-delete {
+                        opacity: 1;
+                        transform: translateX(-8px);
+
+                    }
+                    .profile-skill-name {
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+            .profile-skill:hover {
+                background-color: #426ae0;
+                color: white;
+            }
+        }
+    }
+}
+
+.profile-details-list-value-add {
+    position: absolute;
+    box-sizing: border-box;
+    top: -20px;
+    right: -370px;
+    border-radius: 5px;
+    background-color: #ffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    z-index: 2000;
+    .prodile-modal-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .profile-modal-name {
+        }
+        .profile-modal-close {
+            padding: 8px 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+
+    input {
+        border: 2px solid rgb(223, 223, 223);
+        outline: none;
+        padding: 10px 10px;
+        border-radius: 8px;
+    }
+    a {
+        border: 2px solid rgb(223, 223, 223);
+        color: #426ae0;
+        font-weight: 600;
+        padding: 7px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+}

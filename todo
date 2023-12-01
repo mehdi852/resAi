@@ -1,0 +1,9 @@
+
+
+
+1 - Made the 80% of optimizations (customizing webpack to not inject unecessary modules)
+2-  Added countries to homepage head section
+4-  fixed language picker language before it was not translated
+6-  reduced number of languages to the targeted countries
+7-  fix the reviews section where the text is not displayed properly
+

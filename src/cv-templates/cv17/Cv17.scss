@@ -1,0 +1,279 @@
+@import '../../components/variables.scss';
+.cv17-board {
+    width: 21cm;
+    height: fit-content !important;
+    font-family: $font;
+    word-break: break-word;
+    // cv-content
+    .cv17-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 14px;
+        box-sizing: border-box;
+
+        .cv17-left {
+            box-sizing: border-box;
+            min-height: 1120px;
+            width: 400px;
+            .cv17-left-top {
+                .cv17-left-top-body {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    width: 100%;
+                    margin: 30px;
+                    box-sizing: border-box;
+                    font-size: 2em;
+                    text-transform: uppercase;
+                    box-sizing: border-box;
+
+                    .cv17-name {
+                        display: flex;
+                        gap: 10px;
+                        font-weight: 600;
+                        font-weight: 600;
+                    }
+
+                    .cv17-job {
+                        color: #b1b1b1;
+                        font-size: 1rem;
+                        text-transform: none;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .cv17-education {
+                .cv17-education-item {
+                    padding-left: 10px;
+                    margin: 10px 40px;
+                    border-left: 2px solid #edc172;
+
+                    max-width: 500px;
+                    .education-title {
+                        color: black;
+                        font-weight: 600;
+                        .education-circle {
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 10px;
+                            transform: translateX(-16px);
+                            background-color: #edc172;
+                        }
+                    }
+                    .education-desc {
+                        font-size: 0.7rem;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .cv17-info {
+                margin: 0px 40px;
+                .cv17-info-item {
+                    display: flex;
+                    .cv17-infoImage {
+                        margin-right: 20px;
+                        .cv17-icon {
+                            color: #f66097;
+                        }
+                    }
+                    .cv17-infoDesc {
+                        font-size: 0.7rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .cv17-skills {
+                margin-left: 40px;
+                .cv17-skills-item {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0px;
+                    .cv17-skillName {
+                        width: 180px;
+                        font-weight: 500;
+                    }
+                    .cv17-skillprogressWrapper {
+                        width: 200px;
+                        height: 10px;
+                        background-color: #121208;
+                        .cv17-skill-progress{
+                            height: 10px;
+                            width: 0px;
+                            background-color:#edc172;
+                        }
+                    }
+                }
+            }
+        }
+        .cv17-right {
+            margin-top: 30px;
+            width: 370px;
+
+            .cv17-right-head {
+                margin-bottom: 20px;
+                margin-left: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                .cv17-right-head-item {
+                    display: flex;
+                    align-items: center;
+                    .cv17-right-iconWrapper {
+                        background-color: #edc172;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50px;
+                        .cv17-icon {
+                            fill: white;
+                        }
+                    }
+                    .cv17-right-item-text {
+                        margin-left: 10px;
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+            .cv17-personal-details {
+                font-size: 0.7rem;
+                width: 90%;
+                margin-left: 40px;
+                margin-bottom: 40px;
+                color: #818080;
+            }
+            .cv17-work-item {
+                width: 90%;
+                margin-left: 40px;
+                display: flex;
+
+                .cv17-work-left {
+                    width: 30%;
+                    .cv17-work-title {
+                        font-weight: 500;
+                        font-size: 0.8rem;
+                    }
+                    .cv17-work-company {
+                        font-weight: 500;
+                        color: #f66097;
+                        font-size: 0.8rem;
+                    }
+                }
+                .cv17-work-right {
+                    width: 100%;
+                    margin: 20px 0px;
+                    border-left: 2px solid #edc172 ;
+                    padding-left: 15px;
+                    position: relative;
+                    .cv17-work-point{
+                        width: 8px;
+                        height: 8px;
+                        position: absolute;
+                        transform: translateX(-20px);
+                        background-color: #edc172;
+                        border-radius: 20px;
+                    }
+
+
+                    .cv17-work-right-head{
+                        display: flex;
+                        justify-content: space-between;
+                        .cv17-work-description{
+                            .cv17-work-title{
+                                font-weight: 500;
+
+                            }
+                            .cv17-work-employer{
+                                font-size: 0.8rem;
+                                font-weight: 400;
+                                color: #bbbaba;
+                            }
+
+                        }
+
+                        .cv17-work-date {
+                            text-align: right;
+                            font-weight: 500;
+                        }
+                    }
+                
+                    .cv17-work-desc {
+                        font-size: 0.7rem;
+                        color: #818080;
+                    }
+                }
+            }
+
+            .cv17-skills {
+                margin-left: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .cv17-skills-item {
+                    display: flex;
+                    margin-top: 10px;
+                    .cv17-skill-name {
+                        width: 100px;
+                        font-size: 0.7rem;
+                        margin-right: 10px;
+                        font-weight: 500;
+                    }
+                    .cv17-skills-stars {
+                        display: flex;
+                        align-items: center;
+                        .cv17-skills-star-filled {
+                            width: 12px;
+                            height: 12px;
+                            background-color: #f66097;
+                            border-radius: 40px;
+                            margin-right: 5px;
+                        }
+                        .cv17-skills-star {
+                            width: 12px;
+                            height: 12px;
+                            background-color: #999999;
+                            border-radius: 40px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cv17-separator {
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #f66097;
+    margin-left: 40px;
+}
+
+.cv17-section-title {
+    color: #414143;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+}
+
+.education-type {
+    margin-left: 0px;
+    padding-left: 40px;
+    background-color: #edc172;
+    color:#edc172;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+}
